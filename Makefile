@@ -6,13 +6,13 @@
 #    By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 14:35:30 by fdi-cecc          #+#    #+#              #
-#    Updated: 2024/04/22 16:31:34 by fdi-cecc         ###   ########.fr        #
+#    Updated: 2024/04/22 16:47:28 by fdi-cecc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 
-SRCS 		= 	ft_isalpha.c ft_isdigit.c ft_isalnum.c
+SRCS 		= 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c
 
 OBJS		=	$(SRCS:.c=.o)
 

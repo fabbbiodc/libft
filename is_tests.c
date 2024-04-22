@@ -34,10 +34,22 @@ void test_isalnum()
 	printf("\n");
 }
 
+void test_isascii()
+{
+    printf("///////\n\n");
+	printf("ft_isascii test\n");
+	printf("q %i \n", ft_isascii('q'));
+    printf("B %i \n", ft_isascii('B'));
+    printf("8 %i \n", ft_isascii('8'));
+    printf(". %i \n", ft_isascii('.'));
+	printf("€ %i \n", ft_isascii(0x20AC));
+	printf("\n");
+}
 int main()
 {
 	test_isalpha();
 	test_isdigit();
 	test_isalnum();
+	test_isascii();
 	return (0);
 }
