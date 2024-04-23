@@ -61,9 +61,22 @@ void test_strlen()
 {
 	printf("///////\n\n");
     printf("~~ ft_isprint test\n");
-	printf("ciao is %i long\n", ft_strlen("ciao"));
-	printf("panino is %i long\n", ft_strlen("panino"));
-	printf("Un bacio ai pupi is %i long\n", ft_strlen("Un bacio ai pupi"));
+	printf("ciao is %zu long\n", ft_strlen("ciao"));
+	printf("panino is %zu long\n", ft_strlen("panino"));
+	printf("Un bacio ai pupi is %zu long\n", ft_strlen("Un bacio ai pupi"));
+}
+void test_memset()
+{
+	char	str[100] = "123456789";
+	int	c;
+	c = '0';
+
+	printf("///////\n\n");
+    printf("~~ ft_memset test\n");
+	printf("%s\n", str);
+	printf("mem length set to 4 and charachter to 0\n");
+	ft_memset(str, c, 4);
+	printf("%s\n", str);
 }
 
 int main()
@@ -74,6 +87,7 @@ int main()
 	test_isascii();
 	test_isprint();
 	test_strlen();
+	test_memset();
 	printf("\n");
 	printf("///////End of test///////");
 	return (0);

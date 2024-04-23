@@ -6,13 +6,13 @@
 #    By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 14:35:30 by fdi-cecc          #+#    #+#              #
-#    Updated: 2024/04/23 11:53:25 by fdi-cecc         ###   ########.fr        #
+#    Updated: 2024/04/23 12:53:58 by fdi-cecc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 
-SRCS 		= 	$(shell find . -name "*.c")
+SRCS 		= 	$(shell find . -name "ft_*.c")
 
 OBJS		=	$(SRCS:.c=.o)
 

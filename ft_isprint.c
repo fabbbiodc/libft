@@ -6,11 +6,11 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 10:43:01 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/23 11:05:37 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/04/23 12:09:09 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

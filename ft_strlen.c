@@ -6,15 +6,17 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:11:39 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/23 11:39:52 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/04/23 12:50:48 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i	=	0;
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
 	while (str[i])
 	{
 		i++;
