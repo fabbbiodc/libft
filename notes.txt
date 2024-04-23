@@ -1,0 +1,4 @@
+libft commands
+
+cc -Wall -Wextra -Werror is_tests.c -L. -lft
+norminette -o ft_*

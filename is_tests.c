@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "libft.h"
 
 void test_isalpha()
@@ -105,6 +104,21 @@ void test_memcpy()
 	ft_memcpy(dest, src, n);
 	printf("The result with a n of %i is\n%s\n", n, dest);
 }
+void test_memmove()
+{
+	char	*src;
+	char dest[20] ="abcdefghilmnop";
+	int	n;
+
+	n = 2;
+	src = "yyyy";
+	printf("///////\n\n");
+    printf("~~ ft_memmove test\n");
+	printf("The destination is %s\n", dest);
+	printf("The source is %s\n", src);
+	ft_memmove(dest, src, n);
+	printf("The result with a n of %i is\n%s\n", n, dest);
+}
 int main()
 {
 	test_isalpha();
@@ -116,6 +130,7 @@ int main()
 	test_memset();
 	test_bzero();
 	test_memcpy();
+	test_memmove();
 	printf("\n");
 	printf("///////End of test///////");
 	return (0);
