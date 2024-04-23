@@ -69,16 +69,26 @@ void test_memset()
 {
 	char	str[100] = "123456789";
 	int	c;
-	c = '0';
+	c = 'X';
 
 	printf("///////\n\n");
     printf("~~ ft_memset test\n");
 	printf("%s\n", str);
-	printf("mem length set to 4 and charachter to 0\n");
+	printf("mem length set to 4 and charachter to X\n");
 	ft_memset(str, c, 4);
 	printf("%s\n", str);
 }
+void test_bzero()
+{
+	char	str[100] = "123456789";
 
+	printf("///////\n\n");
+    printf("~~ ft_bzero test\n");
+	printf("%s\n", str);
+	printf("it should not print anything because of the null character\n");
+	ft_bzero(str, 4);
+	printf("%s\n", str);
+}
 int main()
 {
 	test_isalpha();
@@ -88,6 +98,7 @@ int main()
 	test_isprint();
 	test_strlen();
 	test_memset();
+	test_bzero();
 	printf("\n");
 	printf("///////End of test///////");
 	return (0);
