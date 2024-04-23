@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 16:49:34 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/23 17:58:17 by fdi-cecc         ###   ########.fr       */
+/*   Created: 2024/04/23 17:45:03 by fdi-cecc          #+#    #+#             */
+/*   Updated: 2024/04/23 17:58:20 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+int main()
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	char	*dest;
+	char	*src;
+	int		n;
 
-	s = (unsigned char*)src;
-	d = (unsigned char*)dest;
-	if (!src && !dest)
-		return (dest);
-	if (src == dest)
-		return (dest);
-	if (src < dest)
-		while (n--)
-			d[n] = s[n];
-	else
-		while (n--)
-			*d++ = *s++;
-	return (dest);
+	dest = "Ciaociao";
+	src = "xxx";
+	n = 2;
+	printf("///////\n\n");
+    printf("~~ ft_strlcpy test\n");
+	printf("The destination is %s\n", dest);
+	printf("The source is %s\n", src);
+	strlcpy(dest, src, n);
+	printf("The result with a n of %i is\n%s\n", n, dest);
 }
