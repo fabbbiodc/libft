@@ -4,7 +4,7 @@
 void test_isalpha()
 {
     printf("///////\n\n");
-	printf("ft_isalpha test\n");
+	printf("~~ ft_isalpha test\n");
 	printf("q %i \n", ft_isalpha('q'));
     printf("B %i \n", ft_isalpha('B'));
     printf("8 %i \n", ft_isalpha('8'));
@@ -15,7 +15,7 @@ void test_isalpha()
 void test_isdigit()
 {
     printf("///////\n\n");
-	printf("ft_isdigit test\n");
+	printf("~~ ft_isdigit test\n");
 	printf("q %i \n", ft_isdigit('q'));
     printf("B %i \n", ft_isdigit('B'));
     printf("8 %i \n", ft_isdigit('8'));
@@ -26,7 +26,7 @@ void test_isdigit()
 void test_isalnum()
 {
     printf("///////\n\n");
-	printf("ft_isalnum test\n");
+	printf("~~ ft_isalnum test\n");
 	printf("q %i \n", ft_isalnum('q'));
     printf("B %i \n", ft_isalnum('B'));
     printf("8 %i \n", ft_isalnum('8'));
@@ -37,7 +37,7 @@ void test_isalnum()
 void test_isascii()
 {
     printf("///////\n\n");
-	printf("ft_isascii test\n");
+	printf("~~ ft_isascii test\n");
 	printf("q %i \n", ft_isascii('q'));
     printf("B %i \n", ft_isascii('B'));
     printf("8 %i \n", ft_isascii('8'));
@@ -49,7 +49,7 @@ void test_isascii()
 void test_isprint()
 {
     printf("///////\n\n");
-    printf("ft_isprint test\n");
+    printf("~~ ft_isprint test\n");
     printf("q %i \n", ft_isprint('q'));
     printf("B %i \n", ft_isprint('B'));
     printf("newline %i \n", ft_isprint('\n'));
@@ -57,6 +57,15 @@ void test_isprint()
     printf("€ %i \n", ft_isprint(0x20AC));
     printf("\n");
 }
+void test_strlen()
+{
+	printf("///////\n\n");
+    printf("~~ ft_isprint test\n");
+	printf("ciao is %i long\n", ft_strlen("ciao"));
+	printf("panino is %i long\n", ft_strlen("panino"));
+	printf("Un bacio ai pupi is %i long\n", ft_strlen("Un bacio ai pupi"));
+}
+
 int main()
 {
 	test_isalpha();
@@ -64,5 +73,8 @@ int main()
 	test_isalnum();
 	test_isascii();
 	test_isprint();
+	test_strlen();
+	printf("\n");
+	printf("///////End of test///////");
 	return (0);
 }
