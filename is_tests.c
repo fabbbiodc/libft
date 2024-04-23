@@ -45,11 +45,24 @@ void test_isascii()
 	printf("€ %i \n", ft_isascii(0x20AC));
 	printf("\n");
 }
+
+void test_isprint()
+{
+    printf("///////\n\n");
+    printf("ft_isprint test\n");
+    printf("q %i \n", ft_isprint('q'));
+    printf("B %i \n", ft_isprint('B'));
+    printf("newline %i \n", ft_isprint('\n'));
+    printf("nul %i \n", ft_isprint('\0'));
+    printf("€ %i \n", ft_isprint(0x20AC));
+    printf("\n");
+}
 int main()
 {
 	test_isalpha();
 	test_isdigit();
 	test_isalnum();
 	test_isascii();
+	test_isprint();
 	return (0);
 }

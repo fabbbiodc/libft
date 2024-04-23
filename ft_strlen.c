@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 15:19:37 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/23 10:51:33 by fdi-cecc         ###   ########.fr       */
+/*   Created: 2024/04/23 11:11:39 by fdi-cecc          #+#    #+#             */
+/*   Updated: 2024/04/23 11:39:52 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int ft_strlen(char *str)
+{
+	int	i;
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-
-#endif
+	i	=	0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
+}

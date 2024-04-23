@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 15:19:37 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/23 10:51:33 by fdi-cecc         ###   ########.fr       */
+/*   Created: 2024/04/23 10:43:01 by fdi-cecc          #+#    #+#             */
+/*   Updated: 2024/04/23 11:05:37 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-
-#endif
+int ft_isprint(int c)
+{
+	return (c >= 32 && c <= 126);
+}
