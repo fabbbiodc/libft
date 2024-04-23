@@ -89,6 +89,22 @@ void test_bzero()
 	ft_bzero(str, 4);
 	printf("%s\n", str);
 }
+
+void test_memcpy()
+{
+	char	*src;
+	char dest[20] ="abcdefghilmnop";
+	int	n;
+
+	n = 3;
+	src = "xxxx";
+	printf("///////\n\n");
+    printf("~~ ft_memcpy test\n");
+	printf("The destination is %s\n", dest);
+	printf("The source is %s\n", src);
+	ft_memcpy(dest, src, n);
+	printf("The result with a n of %i is\n%s\n", n, dest);
+}
 int main()
 {
 	test_isalpha();
@@ -99,6 +115,7 @@ int main()
 	test_strlen();
 	test_memset();
 	test_bzero();
+	test_memcpy();
 	printf("\n");
 	printf("///////End of test///////");
 	return (0);
