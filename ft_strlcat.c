@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 17:45:03 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/25 14:46:35 by fdi-cecc         ###   ########.fr       */
+/*   Created: 2024/04/25 14:32:26 by fdi-cecc          #+#    #+#             */
+/*   Updated: 2024/04/25 15:26:41 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char const *src, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
 	size_t	i;
+	size_t	d;
 
-	i = 0;
-	if (n == 0)
-		return (ft_strlen(src));
-	while (src[i] && i < (n - 1))
+	d = 0;
+	while (dest[d] && d < n)
+		d++;
+	i = d;
+	while (src[d - i] && d + 1 < n)
 	{
-		dest[i] = src[i];
-		i++;
+		dest[d] = src [d - i];
+		d++;
 	}
-	dest[i] = '\0';
-	return (ft_strlen(src));
+	if (i < n)
+		dest[d] = '\0';
+	return (i + ft_strlen(src));
 }
