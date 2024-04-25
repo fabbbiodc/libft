@@ -6,19 +6,19 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:49:34 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/23 17:58:17 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/04/25 12:42:38 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;
 
-	s = (unsigned char*)src;
-	d = (unsigned char*)dest;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
 	if (!src && !dest)
 		return (dest);
 	if (src == dest)

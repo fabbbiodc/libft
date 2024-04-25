@@ -6,25 +6,26 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 17:45:03 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/23 17:58:20 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/04/25 12:43:07 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main()
+size_t	ft_strlcpy(char *dest, char const *src, size_t n)
 {
-	char	*dest;
-	char	*src;
-	int		n;
+	size_t	i;
 
-	dest = "Ciaociao";
-	src = "xxx";
-	n = 2;
-	printf("///////\n\n");
-    printf("~~ ft_strlcpy test\n");
-	printf("The destination is %s\n", dest);
-	printf("The source is %s\n", src);
-	strlcpy(dest, src, n);
-	printf("The result with a n of %i is\n%s\n", n, dest);
+	i = 0;
+	if (!dest || !src)
+		return (0);
+	if (n == 0)
+		return (ft_strlen(src));
+	while (src[i] && i < (n - 1))
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (ft_strlen(src));
 }

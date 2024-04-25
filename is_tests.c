@@ -117,7 +117,30 @@ void test_memmove()
 	printf("The destination is %s\n", dest);
 	printf("The source is %s\n", src);
 	ft_memmove(dest, src, n);
-	printf("The result with a n of %i is\n%s\n", n, dest);
+	printf("The result with a n of %i is %s\n", n, dest);
+}
+void test_strlcpy()
+{
+	char src[] = "Ciao Ciao!";
+	size_t	rslt;
+
+	char dest_ok[20];
+	char dest_ko[5];
+	char dest_0[0];
+	printf("///////\n\n");
+    printf("~~ ft_strlcpy test\n");
+	ft_memset(dest_ok, 'x', sizeof(dest_ok));
+	printf("~Dest is %zu long and src(%s) is %zu long\n", sizeof(dest_ok), src, ft_strlen(src));
+	rslt = ft_strlcpy(dest_ok, src, sizeof(dest_ok));
+	printf("After cpy src into dest length is %zu\n", ft_strlcpy(dest_ok, src, sizeof(dest_ok)));
+	ft_memset(dest_ko, 'x', sizeof(dest_ko));
+	printf("~Dest is %zu long and src(%s) is %zu long\n", sizeof(dest_ko), src, ft_strlen(src));
+	rslt = ft_strlcpy(dest_ko, src, sizeof(dest_ko));
+	printf("After cpy src into dest length is %zu\n", ft_strlcpy(dest_ko, src, sizeof(dest_ko)));
+	ft_memset(dest_0, 'x', sizeof(dest_0));
+	printf("~Dest is %zu long and src(%s) is %zu long\n", sizeof(dest_0), src, ft_strlen(src));
+	rslt = ft_strlcpy(dest_0, src, sizeof(dest_0));
+	printf("After cpy src into dest length is %zu\n", ft_strlcpy(dest_0, src, sizeof(dest_0)));
 }
 int main()
 {
@@ -131,6 +154,7 @@ int main()
 	test_bzero();
 	test_memcpy();
 	test_memmove();
+	test_strlcpy();
 	printf("\n");
 	printf("///////End of test///////");
 	return (0);
