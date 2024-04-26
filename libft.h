@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:19:37 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/25 22:49:53 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/04/26 11:01:12 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
