@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:10:08 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/04/26 15:47:02 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/04/27 20:47:38 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 	while (*str >= '0' && *str <= '9')
 	{
 		rslt = rslt * 10 + *str - '0';
-		str++; 
+		str++;
 	}
 	return (rslt * sign);
 }
