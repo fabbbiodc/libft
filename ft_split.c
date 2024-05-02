@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 17:58:00 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/01 23:42:33 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/05/02 12:05:00 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,9 @@ char	**ft_split(char const *s, char c)
 	if (!strings)
 		return (NULL);
 	if (!ft_allocation(strings, s, c, 0))
+	{
+		free(strings);
 		return (NULL);
+	}
 	return (strings);
 }

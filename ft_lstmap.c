@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 02:29:47 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/02 02:39:26 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/05/02 12:58:58 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*new_node;
 
-	new_list = NULL;
+	if (!lst || !f || !del)
+		return (NULL);
+	new_list = ft_lstnew(f(lst->content));
+	if (!new_list)
+		return (NULL);
 	while (lst)
 	{
 		new_node = ft_lstnew(f(lst->content));
