@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:49:34 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/02 11:41:51 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/05/02 11:48:05 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	s = (unsigned char *)src;
 	d = (unsigned char *)dest;
-	if (!src && !dest)
+	if (!src || !dest)
 		return (dest);
 	if (src == dest)
 		return (dest);
