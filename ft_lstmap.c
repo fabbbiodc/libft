@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 00:49:19 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/02 01:06:12 by fdi-cecc         ###   ########.fr       */
+/*   Created: 2024/05/02 02:29:47 by fdi-cecc          #+#    #+#             */
+/*   Updated: 2024/05/02 02:39:26 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
-	write(fd, "\n", 1);
+	t_list	*new_list;
+	t_list	*new_node;
+
+	new_list = NULL;
+	while (lst)
+	{
+		new_node = ft_lstnew(f(lst->content));
+		if (!new_node)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_list, new_node);
+		lst = lst->next;
+	}
+	return (new_list);
 }
