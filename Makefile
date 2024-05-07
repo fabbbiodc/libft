@@ -6,21 +6,21 @@
 #    By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 14:35:30 by fdi-cecc          #+#    #+#              #
-#    Updated: 2024/05/07 09:44:09 by fdi-cecc         ###   ########.fr        #
+#    Updated: 2024/05/07 10:29:54 by fdi-cecc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 
-NAME		=	ft_printf.a
+SRCS_DIR	=	srcs
 
-SRCS 		= 	$(shell find . -name "ft_*.c")
+SRCS 		= 	$(shell find $(SRCS_DIR) -name "ft_*.c")
 
 OBJS		=	$(SRCS:.c=.o)
 
 CC			=	cc
 
-CFLAGS		= 	-Wall -Wextra -Werror
+CFLAGS		= 	-Wall -Wextra -Werror -Iincludes
 
 all:		$(NAME)
 
